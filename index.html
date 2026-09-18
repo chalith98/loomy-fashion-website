@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loomy Fashion | Custom Tees & Stylish Wear</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation Header -->
+    <header class="main-header">
+        <!-- Logo Container -->
+        <div class="logo-container">
+            <a href="#home">
+                <img src="image/poster/logo.jpeg" alt="Loomy Fashion Logo" class="nav-logo">
+                <span class="logo-text">LOOMY <span>FASHION</span></span>
+            </a>
+        </div>
+
+        <!-- Desktop Navigation Tabs -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#shop" class="nav-link">Shop</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+            <div class="search-capsule">
+                <input type="text" placeholder="Search clothes...">
+                <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Updated Login Icon with Cart Design -->
+            <a href="login.html" class="cart-icon" id="nav-login-icon" title="Login / Register">
+                <i class="fas fa-user"></i>
+            </a>
+
+            <!-- Cart Icon -->
+            <div class="cart-icon" onclick="toggleCart()" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- App-Style Floating Bottom Nav for Mobile Devices -->
+    <div class="mobile-bottom-nav">
+        <a href="#home" class="mobile-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#shop" class="mobile-nav-item">
+            <i class="fas fa-store"></i>
+            <span>Shop</span>
+        </a>
+        <a href="#about" class="mobile-nav-item">
+            <i class="fas fa-heart"></i>
+            <span>About</span>
+        </a>
+        <a href="#contact" class="mobile-nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+        <a href="javascript:void(0)" class="mobile-nav-item" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Cart</span>
+        </a>
+    </div>
+
+    <!-- 1. HOME SECTION -->
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content reveal-left">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i> New Season Collection - 2026
+                </div>
+                <h1>Redefine Your Style With <span>Loomy Fashion</span></h1>
+                <p>Discover trendy, cute, and comfortable girl's wear crafted for every occasion. Upgrade your wardrobe
+                    with our latest arrivals today.</p>
+
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary">Shop Collection <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-secondary">Explore Brand</a>
+                </div>
+
+                <div class="trust-features">
+                    <div class="trust-item">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Islandwide Delivery</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-shield-heart"></i>
+                        <span>Premium Quality</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-rotate-left"></i>
+                        <span>Easy Exchanges</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper reveal-right">
+                <div class="hero-img-card">
+                    <img src="image/poster/home-poster.jpg" alt="Loomy Fashion Girl Collection">
+                    <div class="floating-tag tag-1">
+                        <i class="fas fa-fire"></i> Trending Now
+                    </div>
+                    <div class="floating-tag tag-2">
+                        <span>Up to 30% OFF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SHOP SECTION -->
+    <section class="section shop-section" id="shop">
+        <div class="shop-section-title reveal-up">
+            <span class="sub-title"><i class="fas fa-sparkles"></i> Custom Printing & Exclusive Tees</span>
+            <h2>Create Your Own Style With <span>Loomy Fashion</span></h2>
+            <div class="title-underline"></div>
+            <p>From 100% custom printed t-shirts to trendy graphic designs — bring your unique ideas to life or pick
+                your favorite casual style with premium quality fabric.</p>
+        </div>
+
+        <div class="custom-card-grid">
+            <!-- Card 1 -->
+            <div class="custom-shop-card reveal-up">
+                <div class="card-img-container">
+                    <img src="image/poster/shop-section-01.jpg" alt="Custom T-Shirt Design">
+                    <span class="card-badge highlight">Custom Order</span>
+                </div>
+                <div class="card-details">
+                    <h3>100% Unique Custom T-Shirts</h3>
+                    <p class="card-desc">Stand out & wear your brand! We bring your ideas to life with high quality 100%
+                        custom t-shirt printing.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Delivery On-Time</li>
+                    </ul>
+                    <div class="card-price-row">
+                        <span class="price-tag">Starting from LKR 1,500</span>
+                    </div>
+                    <div class="card-btn-group">
+                        <button class="btn-gallery" onclick="openGallery('custom-tees')"><i class="fas fa-images"></i>
+                            View Gallery</button>
+                        <a href="https://wa.me/94781183434?text=I%20want%20to%20order%20Custom%20T-Shirt"
+                            target="_blank" class="btn-order"><i class="fab fa-whatsapp"></i> Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="custom-shop-card reveal-up">
+                <div class="card-img-container">
+                    <img src="image/poster/shop-section-02.jpg" alt="Heat Press Printing">
+                    <span class="card-badge">Print Shop</span>
+                </div>
+                <div class="card-details">
+                    <h3>Heat Press & Vinyl Printing</h3>
+                    <p class="card-desc">Durable, vibrant color prints for events, brands, and personal styles with
+                        premium fabric quality.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> High Quality Print & Washable</li>
+                        <li><i class="fas fa-check-circle"></i> Perfect for Businesses & Events</li>
+                    </ul>
+                    <div class="card-price-row">
+                        <span class="price-tag">Starting from LKR 1,500</span>
+                    </div>
+                    <div class="card-btn-group">
+                        <button class="btn-gallery" onclick="openGallery('heat-press')"><i class="fas fa-images"></i>
+                            View Gallery</button>
+                        <a href="https://wa.me/94781183434?text=I%20want%20to%20order%20Heat%20Press%20Print"
+                            target="_blank" class="btn-order"><i class="fab fa-whatsapp"></i> Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="custom-shop-card reveal-up">
+                <div class="card-img-container">
+                    <img src="image/poster/shop-section-03.jpg" alt="Premium Graphic Tees">
+                    <span class="card-badge hot">Trending</span>
+                </div>
+                <div class="card-details">
+                    <h3>Premium Graphic & Bear Tees</h3>
+                    <p class="card-desc">Trendy calligraphy and graphic back-printed t-shirts made from 100% breathable
+                        cotton fabric.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> Classical Premium Fabrics</li>
+                        <li><i class="fas fa-check-circle"></i> Relaxed Fit Styles</li>
+                    </ul>
+                    <div class="card-price-row">
+                        <span class="price-tag">LKR 1,500</span>
+                    </div>
+                    <div class="card-btn-group">
+                        <button class="btn-gallery" onclick="openGallery('graphic-tees')"><i class="fas fa-images"></i>
+                            View Gallery</button>
+                        <a href="https://wa.me/94781183434?text=I%20want%20to%20order%20Graphic%20Tee" target="_blank"
+                            class="btn-order"><i class="fab fa-whatsapp"></i> Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="custom-shop-card reveal-up">
+                <div class="card-img-container">
+                    <img src="image/poster/shop-section-04.jpg" alt="Loomy Signature Collection">
+                    <span class="card-badge">New Arrival</span>
+                </div>
+                <div class="card-details">
+                    <h3>Cute & Casual Girl's Wear</h3>
+                    <p class="card-desc">Loomy Fashion signature collection - Cute tops, summer dresses, and comfortable
+                        casual wear for girls.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> Soft & Comfortable Material</li>
+                        <li><i class="fas fa-check-circle"></i> Aesthetic Girl's Fashion</li>
+                    </ul>
+                    <div class="card-price-row">
+                        <span class="price-tag">LKR 1,500</span>
+                    </div>
+                    <div class="card-btn-group">
+                        <button class="btn-gallery" onclick="openGallery('loomy-signature')"><i
+                                class="fas fa-images"></i> View Gallery</button>
+                        <a href="https://wa.me/94781183434?text=I%20want%20to%20order%20Loomy%20Signature%20Dress"
+                            target="_blank" class="btn-order"><i class="fab fa-whatsapp"></i> Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery Modal -->
+    <div class="gallery-modal" id="gallery-modal">
+        <div class="gallery-content">
+            <div class="gallery-header">
+                <h3 id="gallery-title">Product Gallery Grid</h3>
+                <span class="close-gallery" onclick="closeGallery()">&times;</span>
+            </div>
+            <div class="gallery-grid" id="gallery-grid-items"></div>
+        </div>
+    </div>
+
+    <!-- Fullsize Image Preview Modal (Lightbox with Navigation) -->
+    <div class="fullsize-modal" id="fullsize-modal">
+        <span class="close-fullsize" onclick="closeFullsizeModal()">&times;</span>
+        <button class="nav-btn prev-btn" onclick="prevImage()">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="fullsize-img" src="" alt="Fullsize Preview">
+            <div id="image-counter" class="image-counter"></div>
+        </div>
+
+        <button class="nav-btn next-btn" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <!-- 3. ABOUT US SECTION -->
+    <section class="section about-section" id="about">
+        <div class="about-container">
+            <div class="about-visual reveal-left">
+                <div class="about-image-wrapper">
+                    <img src="image/poster/about-poster.jpg" alt="Loomy Fashion Creative Studio">
+                    <div class="experience-badge">
+                        <span class="exp-number">100%</span>
+                        <span class="exp-text">Quality Guaranteed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content reveal-right">
+                <span class="sub-title"><i class="fas fa-heart"></i> Who We Are</span>
+                <h2>We Craft Wearable Art That Speaks <span>Your Unique Style</span></h2>
+                <div class="title-underline-left"></div>
+
+                <p class="about-lead">
+                    Welcome to <strong>Loomy Fashion</strong> — where creativity meets quality fashion! We specialize in
+                    custom t-shirt printing and aesthetic girl's apparel designed to empower your individuality.
+                </p>
+                <p class="about-body">
+                    Whether you need a single customized print to express your idea or trendy casual wear from our
+                    exclusive lineup, we deliver premium fabrics, vivid long-lasting prints, and unmatched comfort for
+                    everyday style.
+                </p>
+
+                <div class="about-values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-palette"></i></div>
+                        <div>
+                            <h4>Custom Artistry</h4>
+                            <p>You think it, we print it with precision.</p>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-shirt"></i></div>
+                        <div>
+                            <h4>Premium Fabrics</h4>
+                            <p>Soft, durable & 100% breathable cotton.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn-about-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="about-stats-strip reveal-up">
+            <div class="stat-box">
+                <i class="fas fa-smile-beam"></i>
+                <div class="stat-info">
+                    <h3>3,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-print"></i>
+                <div class="stat-info">
+                    <h3>7,500+</h3>
+                    <p>Custom Tees Printed</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-star"></i>
+                <div class="stat-info">
+                    <h3>4.0 / 5</h3>
+                    <p>Customer Rating</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-truck-fast"></i>
+                <div class="stat-info">
+                    <h3>Islandwide</h3>
+                    <p>Express Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+        <div class="contact-header reveal-up">
+            <span class="sub-title"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+            <h2>Let's Start A Conversation With <span>Loomy Fashion</span></h2>
+            <div class="title-underline"></div>
+            <p>Have a custom t-shirt design idea, bulk order query, or question about our collections? Chat with us
+                directly on WhatsApp or leave a message below!</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info-grid reveal-left">
+                <a href="https://wa.me/94781183434?text=Hi%20Loomy%20Fashion!%20I%20would%20like%20to%20inquire%20about%20a%20custom%20order."
+                    target="_blank" class="contact-card whatsapp-card">
+                    <div class="contact-icon wa-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="card-tag">Fastest Response</span>
+                        <h3>Direct WhatsApp Chat</h3>
+                        <span class="action-text">+94 78 118 3434 <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="tel:+94781183434" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Call Us Directly</h3>
+                        <p>Mon - Sat (9:00 AM - 7:00 PM)</p>
+                        <span class="action-text">+94 78 118 3434</span>
+                    </div>
+                </a>
+
+                <a href="mailto:info@loomyfashion.com" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Support</h3>
+                        <p>For business & custom bulk orders</p>
+                        <span class="action-text">info@loomyfashion.com</span>
+                    </div>
+                </a>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Store & Studio Location</h3>
+                        <p>Islandwide Delivery from Colombo, Sri Lanka</p>
+                        <span class="action-text">Visit By Appointment</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card reveal-right">
+                <h3><i class="fas fa-comment-dots"></i> Send A Quick Order Message</h3>
+                <p>Fill in the details and send it directly to our WhatsApp!</p>
+
+                <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="custName" placeholder="e.g. Loomy Fashion" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-tags"></i> Service Type</label>
+                        <select id="serviceType" required>
+                            <option value="Custom T-Shirt Printing">Custom T-Shirt Printing</option>
+                            <option value="Heat Press / Vinyl Print">Heat Press / Vinyl Print</option>
+                            <option value="Graphic Tee Purchase">Graphic Tee Purchase</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-pencil-alt"></i> Message / Idea Details</label>
+                        <textarea id="custMsg" rows="4"
+                            placeholder="Describe your print idea, size, color, or quantity..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-wa-send">
+                        <i class="fab fa-whatsapp"></i> Send Message via WhatsApp
+                    </button>
+                </form>
+
+                <div class="social-connect">
+                    <span>Follow Us:</span>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/loomyfashion/" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/19kH7sgVmJ/" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@loomyfashion" target="_blank" aria-label="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="simple-unique-footer">
+        <div class="footer-inner">
+            <!-- Top Part: Logo & Newsletter -->
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Loomy<span>Fashion</span></h3>
+                    <p>Creating digital solutions with perfection and simplicity.</p>
+                </div>
+                <div class="footer-cta">
+                    <p>Let's work together!</p>
+                    <a href="#contact" class="footer-btn">Get In Touch</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <!-- Middle Part: Quick Navigation -->
+            <div class="footer-nav">
+                <div class="nav-group">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#shop">shop</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-group">
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/19kH7sgVmJ/" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Bottom Part: Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Loomy Fashion. All rights reserved.</p>
+                <p class="credit">Designed with SKY Design By RMCS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar Overlay & Drawer -->
+    <div class="cart-backdrop" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <span onclick="toggleCart()" class="close-btn">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-items-body"></div>
+        <div class="cart-total">
+            <h4>Total: <span>LKR <span id="cart-total-price">0</span></span></h4>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
