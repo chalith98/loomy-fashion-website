@@ -53,8 +53,8 @@ function toggleCart() {
     if (backdrop) backdrop.classList.toggle("active");
 }
 
-let currentGalleryList = []; // Denata thiyena category eke image URLs
-let currentImageIndex = 0;   // Innasna image eke index eka
+let currentGalleryList = []; // තෝරාගත් කැටගරි එකේ Image URLs
+let currentImageIndex = 0;   // දැනට බලන Image එකේ Index එක
 
 // Open Dynamic Gallery Popup
 function openGallery(categoryKey) {
@@ -88,7 +88,9 @@ function updateFullsizeImage() {
     const counter = document.getElementById("image-counter");
 
     fullsizeImg.src = currentGalleryList[currentImageIndex];
-    counter.innerText = `${currentImageIndex + 1} / ${currentGalleryList.length}`;
+    if (counter) {
+        counter.innerText = `${currentImageIndex + 1} / ${currentGalleryList.length}`;
+    }
 }
 
 function nextImage() {
@@ -107,10 +109,14 @@ function closeFullsizeModal() {
     document.getElementById("fullsize-modal").style.display = "none";
 }
 
+function closeGallery() {
+    document.getElementById("gallery-modal").style.display = "none";
+}
+
 // Keyboard arrow navigation support
 document.addEventListener('keydown', function (event) {
     const fullsizeModal = document.getElementById("fullsize-modal");
-    if (fullsizeModal.style.display === "flex") {
+    if (fullsizeModal && fullsizeModal.style.display === "flex") {
         if (event.key === "ArrowRight") {
             nextImage();
         } else if (event.key === "ArrowLeft") {
@@ -120,27 +126,6 @@ document.addEventListener('keydown', function (event) {
         }
     }
 });
-
-function closeFullsizeModal() {
-    document.getElementById("fullsize-modal").style.display = "none";
-}
-
-// Fullsize Image Lightbox Functions
-function openFullsizeModal(imageSrc) {
-    const fullsizeModal = document.getElementById("fullsize-modal");
-    const fullsizeImg = document.getElementById("fullsize-img");
-
-    fullsizeImg.src = imageSrc;
-    fullsizeModal.style.display = "flex";
-}
-
-function closeFullsizeModal() {
-    document.getElementById("fullsize-modal").style.display = "none";
-}
-
-function closeGallery() {
-    document.getElementById("gallery-modal").style.display = "none";
-}
 
 // Close Modal when clicking outside
 window.onclick = function (event) {
@@ -240,20 +225,6 @@ function togglePasswordVisibility(inputId, icon) {
         input.type = 'password';
         icon.classList.replace('fa-eye-slash', 'fa-eye');
     }
-}
-
-// Dummy Login Form Submission
-function handleLogin(e) {
-    e.preventDefault();
-    alert("Welcome Back to Loomy Fashion!");
-    window.location.href = "index.html";
-}
-
-// Dummy Register Form Submission
-function handleRegister(e) {
-    e.preventDefault();
-    alert("Account Created Successfully!");
-    window.location.href = "index.html";
 }
 
 // Actual Backend Login Request
