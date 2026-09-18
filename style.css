@@ -1688,7 +1688,7 @@ body {
    ========================================== */
 .login-body {
     min-height: 100vh;
-    background: #0f0c1b;
+    background: linear-gradient(135deg, #2c2a75, #d81b80);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1762,7 +1762,7 @@ body {
     width: 100%;
     height: 100%;
     /* Oya langa thiyena fashion/model image ekaka path eka meka wenuwata danna puluwan (E.g. image/fashion-banner.jpg) */
-    background-image: url('image/shop-section-01.jpg');
+    background-image: url('image/poster/shop-section-01.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.85);
